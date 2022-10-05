@@ -16,7 +16,6 @@ $Run = $True
 # Logic
 cls
 
-" Checking for installed browsers."
 Get-Browser
 
 While($Run) {
@@ -24,9 +23,9 @@ While($Run) {
     $Action = Get-BrowserAction
 
     Switch($Action) {
-        "a" { Select-Browser; break; }
-        "l" { List-Browser; break; }
-        "c" { cls; break;}
+        "a" { Enter-Browser; break; }
+        "l" { Show-Browser; break; }
+        "c" { Clear-Screen; break;}
         "q" { $Run = $False; break; }
     }
 
